@@ -6,7 +6,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 # ---------------------------
 # 1. Load & Preprocess Data
 # ---------------------------
-csv_path = "MovieGenre.csv"
+csv_path = "original_dataset\MovieGenre.csv"
 df = pd.read_csv(csv_path, encoding="latin1")
 
 # Keep only rows with valid Poster URLs and Genres
