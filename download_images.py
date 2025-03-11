@@ -1,31 +1,13 @@
 import os
-import requests
 import pandas as pd
-from PIL import Image
-from io import BytesIO
+from DataPreprocessing.download_img import download_image
 
 # Create Images directory if it doesn't exist
 os.makedirs('Images', exist_ok=True)
 
 # Load the CSV file
-df = pd.read_csv('poster_genres_binarized_1.csv') 
+df = pd.read_csv('poster_genres_binarized.csv') 
 
-def download_image(url, id):
-    """Download and save image with error handling"""
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()  # Raise exception for HTTP errors
-        
-        # Open image and convert to RGB (to handle PNG transparency issues)
-        img = Image.open(BytesIO(response.content)).convert('RGB')
-        
-        # Save image with ID as filename
-        img.save(f'Images/{id}.jpg')
-        return True
-        
-    except Exception as e:
-        print(f"Failed to download {url} (ID: {id}): {str(e)}")
-        return False
 
 # Process each row in the dataframe
 for index, row in df.iterrows():
