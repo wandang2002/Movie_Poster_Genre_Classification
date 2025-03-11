@@ -32,3 +32,19 @@ You should now see `(tensorflow_env)` at the beginning of your terminal prompt. 
 > ```bash
 > pip install -r requirements.txt
 > ```
+
+4. Data preparation
+
+> **Bash**  
+> ```bash
+> python data_cleaning.py
+> ```
+
+This will clean and binarize genre labels to support multi-label classification, ensuring the dataset was properly structured for model training and evaluation.
+
+> **Bash**  
+> ```bash
+> python download_images.py
+> ```
+
+This will download the images locally to the machine so that the model can train faster without needing to access the URL.
