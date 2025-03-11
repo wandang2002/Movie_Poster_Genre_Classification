@@ -105,7 +105,7 @@ model.compile(
 # Add callbacks
 callbacks = [
     tf.keras.callbacks.EarlyStopping(patience=3, monitor='val_loss'),
-    tf.keras.callbacks.ModelCheckpoint('best_model.h5', save_best_only=True)
+    tf.keras.callbacks.ModelCheckpoint('movie_poster_app/model/best_model.h5', save_best_only=True)
 ]
 
 # Train model
