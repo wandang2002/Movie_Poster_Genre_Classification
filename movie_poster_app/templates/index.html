@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Genre Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Poster Genre Predictor</h1>
+        
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Predict Genres</button>
+        </form>
+
+        {% if filename %}
+            <div class="results">
+                <h2>Prediction Results:</h2>
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" 
+                     alt="Uploaded Poster" width="300">
+                
+                <div class="predictions">
+                    {% for genre, confidence in predictions %}
+                        <div class="genre">
+                            <span class="genre-name">{{ genre }}</span>
+                            <span class="confidence">{{ "%.1f%%"|format(confidence*100) }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
