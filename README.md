@@ -15,8 +15,6 @@ Python : version 3.9 - 3.12 (in order to match with Tensorflow). I'm using Pytho
 
 This tells the launcher to use Python 3.10 to create a new virtual environment named `tensorflow_env`.
 
----
-
 2. Active the virtual environment
 
 > **Bash**  
@@ -28,4 +26,9 @@ This tells the launcher to use Python 3.10 to create a new virtual environment n
 
 You should now see `(tensorflow_env)` at the beginning of your terminal prompt. Any `python` or `pip` commands in this prompt will use Python 3.11 from your newly created environment.
 
----
+3. Install requirements.txt
+
+> **Bash**  
+> ```bash
+> pip install -r requirements.txt
+> ```
