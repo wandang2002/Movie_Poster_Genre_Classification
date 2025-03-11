@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from sklearn.preprocessing import MultiLabelBinarizer
 from DataPreprocessing.check_url import is_url_active
 # ---------------------------
@@ -48,4 +49,5 @@ final_df = pd.DataFrame({
 }).join(binarized_df)
 
 # Save to CSV
-final_df.to_csv("poster_genres_binarized.csv", index=False)
+os.makedirs('Processed_data', exist_ok=True)
+final_df.to_csv("Processed_data/poster_genres_binarized.csv", index=False)
