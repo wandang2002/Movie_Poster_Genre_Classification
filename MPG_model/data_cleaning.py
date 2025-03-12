@@ -44,7 +44,7 @@ binarized_df = pd.DataFrame(binarized, columns=mlb.classes_)
 # ---------------------------
 final_df = pd.DataFrame({
     'Id' : range(1, len(valid_data) + 1),  # Add ID column
-    'URL': [item['Id'] for item in valid_data],  # Poster URLs
+    'URL': [item['URL'] for item in valid_data],  # Poster URLs
     'Genre': [item['Genre'] for item in valid_data]  # Original genre lists
 }).join(binarized_df)
 
