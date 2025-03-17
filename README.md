@@ -48,3 +48,19 @@ This will clean and binarize genre labels to support multi-label classification,
 > ```
 
 This will download the images locally to the machine so that the model can train faster without needing to access the URL.
+
+5. **Training the model**
+
+> **Bash**
+> ```bash
+> python movie_genre_classification.py
+> ```
+
+At this point, just go and get some coffee, do another works, and get back in about an hour (or slower, depend on your computer)
+
+6. **Run the model**
+> **Bash**
+> ```bash 
+> cd movie_poster_app
+> python app.py
+> ```
