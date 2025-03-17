@@ -37,6 +37,7 @@ You should now see `(tensorflow_env)` at the beginning of your terminal prompt. 
 
 > **Bash**  
 > ```bash
+> cd MPG_model
 > python data_cleaning.py
 > ```
 
