@@ -2,6 +2,6 @@ numpy
 pandas
 tensorflow
 requests
-sklearn
+scikit_learn
 flask
 Pillow
